@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: com.amayas.roomApp.Controller.ReservationControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.41 s <<< FAILURE! - in com.amayas.roomApp.Controller.ReservationControllerTest
+getAllReservations_ReturnsListOfReservations  Time elapsed: 0.008 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reservationController': Unsatisfied dependency expressed through field 'reservationService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.amayas.roomApp.Service.ReservationService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.amayas.roomApp.Service.ReservationService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+
