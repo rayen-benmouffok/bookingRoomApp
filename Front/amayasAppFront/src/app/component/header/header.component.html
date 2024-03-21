@@ -1,0 +1,13 @@
+<div class="card">
+    <p-toolbar>
+        <div class="p-toolbar-group-start" style="margin-left: 10px;">
+            <p-button label="Reserver" class="mr-2" routerLink="/rooms"></p-button>
+            <p-button label="Mes réservations" styleClass="p-button-success" style="margin-left: 10px;"
+                routerLink="/myRooms"></p-button>
+        </div>
+        <div class="p-toolbar-group-end">
+            <p-button label="Se déconnecter" styleClass="p-button-danger" routerLink="/login"
+                (onClick)=" logout()"></p-button>
+        </div>
+    </p-toolbar>
+</div>

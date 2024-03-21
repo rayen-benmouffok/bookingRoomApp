@@ -1,0 +1,59 @@
+<H1 style="align-items: center;">Toutes les salles</H1>
+
+<div class="container">
+    <div class="card">
+        <p-table [value]="rooms" [tableStyle]="{ 'min-width': '50rem' }">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Code</th>
+                    <th>Nom</th>
+                    <th>Action</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-room>
+                <tr>
+                    <td>{{ room.id }}</td>
+                    <td>{{ room.nom }}</td>
+                    <td><p-button (click)="showDialog(room.id,room.nom)" icon="pi pi-external-link"
+                            label="Reserver cette salle"></p-button></td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>
+
+
+<div class="card flex justify-content-center">
+    <p-dialog header="Choix de créneau" [(visible)]="reservationDialogueVisibility"
+        [style]="{width: '50vw',height:'50vw'}">
+        <div>
+            <label>Nom de la salle</label>
+        </div>
+        <div>
+            <input type="text" pInputText placeholder="Keyword" class="form-control mb-2"
+                style="height: 40px; width:33%" [(ngModel)]="roomToBookName" disabled="">
+        </div>
+
+        <div>
+            <label htmlFor="userPassword">Durée en minute de la réservation</label>
+        </div>
+
+        <div>
+            <p-inputNumber inputId="integeronly" [(ngModel)]="newReservation.duree" (input)="checkForm()"
+                style="height: 40px; width:33%"> </p-inputNumber>
+        </div>
+
+        <div style="margin-top: 50px;">
+            <input type="datetime-local" class="form-control mb-2" [(ngModel)]="newReservation.dateDebut"
+                (input)="checkForm()">
+        </div>
+
+        <div style="margin-top: 30px;align-items: end;">
+            <p-button icon="pi pi-external-link" label="Enregistrer" [disabled]="!isFormValid"
+                (onClick)="saveReservation()"></p-button>
+        </div>
+    </p-dialog>
+</div>
+
+
+<p-toast></p-toast>

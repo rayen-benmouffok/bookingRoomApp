@@ -1,0 +1,25 @@
+<div class="form-container">
+    <div class="form">
+        <div id="login">
+            <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" class="login-form">
+                <div class="field-wrap">
+                    <div class="flex flex-column gap-2">
+                        <label htmlFor="userName">Username</label>
+                        <input type="text" id="userName" name="userName" aria-describedby="username-help" ngModel />
+                    </div>
+                </div>
+                <div class="field-wrap">
+                    <label htmlFor="userPassword">Password</label>
+                    <input type="password" id="userPassword" name="userPassword" aria-describedby="userPassword-help"
+                        ngModel />
+                </div>
+                <div class="form-check mb-3" style="margin-bottom: 30px;">
+                    <label *ngIf="credentialsIncorrect" class="form-check-label" style="color: red;">
+                        Nom d'utilisateur ou mot de passe incorrect
+                    </label>
+                </div>
+                <p-button type="submit" value="Login" label="Se connecter" class="mr-2"></p-button>
+            </form>
+        </div>
+    </div>
+</div>
