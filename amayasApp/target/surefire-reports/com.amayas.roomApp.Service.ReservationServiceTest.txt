@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.amayas.roomApp.Service.ReservationServiceTest
--------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.07 s <<< FAILURE! - in com.amayas.roomApp.Service.ReservationServiceTest
-creerReservation_Conflict_ThrowsException  Time elapsed: 0.015 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Expected com.amayas.roomApp.Exception.ReservationConflictException to be thrown, but nothing was thrown.
-	at com.amayas.roomApp.Service.ReservationServiceTest.creerReservation_Conflict_ThrowsException(ReservationServiceTest.java:51)
-
