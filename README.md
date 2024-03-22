@@ -12,4 +12,9 @@ http://localhost:8080/swagger-ui/index.html
 http://localhost:4200
 
 ## Identifiants de connexion 
+Accès1 =>
 Nom d'utilisateur: User123 MDP: User123
+Accès2 => 
+Nom d'utilisateur User MDP: User
+
+
